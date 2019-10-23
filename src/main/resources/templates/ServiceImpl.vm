@@ -1,0 +1,23 @@
+package com.sinosoft.sss.cloud.customer.service.impl;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ${package_name}.respository.${model}Dao;
+import ${package_name}.service.${model}Service;
+
+/**
+* ${model}Service 接口实现
+* @date ${ctime}
+*/
+@Service
+public class ${model}ServiceImpl implements ${model}Service{
+private static final Logger logger = LoggerFactory.getLogger(${model}ServiceImpl.class);
+
+  @Autowired
+  private ${model}Dao ${modelAlias}Dao;
+
+}

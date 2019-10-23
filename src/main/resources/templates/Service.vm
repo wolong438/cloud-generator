@@ -1,0 +1,9 @@
+package ${package_name}.service;
+
+/**
+* ${model}Service 业务接口
+* @date ${ctime}
+*/
+public interface ${model}Service {
+
+}

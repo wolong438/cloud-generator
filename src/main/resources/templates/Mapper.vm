@@ -1,0 +1,9 @@
+package ${package_name}.respository.impl4mybatis.mapper;
+
+/**
+* ${model}Mapper接口
+* @date ${ctime}
+*/
+public interface ${model}Mapper extends BaseMapper {
+
+}

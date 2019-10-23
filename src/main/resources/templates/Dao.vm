@@ -1,0 +1,9 @@
+package ${package_name}.respository;
+
+/**
+* ${model}Dao接口
+* @date ${ctime}
+*/
+public interface ${model}Dao {
+
+}

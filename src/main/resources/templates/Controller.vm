@@ -1,0 +1,23 @@
+package ${package_name}.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import ${package_name}.api.springmvc.${model}Api;
+import ${package_name}.service.${model}Service;
+
+/**
+* ${model}Controller控制器
+* @date ${ctime}
+*/
+@RestController
+public class ${model}Controller implements ${model}Api{
+  private static final Logger logger = LoggerFactory.getLogger(${model}Controller.class);
+
+  @Autowired
+  private ${model}Service ${modelAlias}Service;
+
+
+}

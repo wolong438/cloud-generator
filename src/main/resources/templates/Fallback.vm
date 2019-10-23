@@ -1,0 +1,11 @@
+package ${package_name}.api.fallback;
+
+import ${package_name}.api.springmvc.${model}Api;
+
+/**
+* ${model}服务降级
+* @date ${ctime}
+*/
+public class Default${model}ApiFallback implements ${model}Api {
+
+}

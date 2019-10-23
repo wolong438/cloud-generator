@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".mapper.LsLatencyCustomerExtraInfoMapper">
+  <resultMap id="BaseResultMap" type="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomerExtraInfo">
+    <result column="customer_no" jdbcType="VARCHAR" property="customerNo" />
+    <result column="has_child" jdbcType="CHAR" property="hasChild" />
+    <result column="child_num" jdbcType="INTEGER" property="childNum" />
+    <result column="wechat_number" jdbcType="VARCHAR" property="wechatNumber" />
+    <result column="wx_openId" jdbcType="VARCHAR" property="wxOpenid" />
+    <result column="wx_head_img" jdbcType="VARCHAR" property="wxHeadImg" />
+    <result column="wx_nick_name" jdbcType="VARCHAR" property="wxNickName" />
+    <result column="source_type" jdbcType="VARCHAR" property="sourceType" />
+    <result column="sub_source_type" jdbcType="VARCHAR" property="subSourceType" />
+    <result column="relationship" jdbcType="VARCHAR" property="relationship" />
+    <result column="degree_of_intimacy" jdbcType="VARCHAR" property="degreeOfIntimacy" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="job_content" jdbcType="VARCHAR" property="jobContent" />
+    <result column="house_count" jdbcType="INTEGER" property="houseCount" />
+    <result column="car_count" jdbcType="INTEGER" property="carCount" />
+    <result column="other_assets" jdbcType="VARCHAR" property="otherAssets" />
+    <result column="liabilities_status" jdbcType="CHAR" property="liabilitiesStatus" />
+    <result column="labels" jdbcType="VARCHAR" property="labels" />
+    <result column="impression" jdbcType="VARCHAR" property="impression" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomerExtraInfo">
+    insert into ls_latency_customer_extra_info (customer_no, has_child, child_num, 
+      wechat_number, wx_openId, wx_head_img, 
+      wx_nick_name, source_type, sub_source_type, 
+      relationship, degree_of_intimacy, company, 
+      job_content, house_count, car_count, 
+      other_assets, liabilities_status, labels, 
+      impression, create_time, modify_time
+      )
+    values (#{customerNo,jdbcType=VARCHAR}, #{hasChild,jdbcType=CHAR}, #{childNum,jdbcType=INTEGER}, 
+      #{wechatNumber,jdbcType=VARCHAR}, #{wxOpenid,jdbcType=VARCHAR}, #{wxHeadImg,jdbcType=VARCHAR}, 
+      #{wxNickName,jdbcType=VARCHAR}, #{sourceType,jdbcType=VARCHAR}, #{subSourceType,jdbcType=VARCHAR}, 
+      #{relationship,jdbcType=VARCHAR}, #{degreeOfIntimacy,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR}, 
+      #{jobContent,jdbcType=VARCHAR}, #{houseCount,jdbcType=INTEGER}, #{carCount,jdbcType=INTEGER}, 
+      #{otherAssets,jdbcType=VARCHAR}, #{liabilitiesStatus,jdbcType=CHAR}, #{labels,jdbcType=VARCHAR}, 
+      #{impression,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select customer_no, has_child, child_num, wechat_number, wx_openId, wx_head_img, 
+    wx_nick_name, source_type, sub_source_type, relationship, degree_of_intimacy, company, 
+    job_content, house_count, car_count, other_assets, liabilities_status, labels, impression, 
+    create_time, modify_time
+    from ls_latency_customer_extra_info
+  </select>
+</mapper>

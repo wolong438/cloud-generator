@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".mapper.LsLatencyCustomerMapper">
+  <resultMap id="BaseResultMap" type="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomer">
+    <id column="customer_no" jdbcType="VARCHAR" property="customerNo" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="name_pinyin" jdbcType="VARCHAR" property="namePinyin" />
+    <result column="info_integrity" jdbcType="VARCHAR" property="infoIntegrity" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="id_type" jdbcType="VARCHAR" property="idType" />
+    <result column="id_no" jdbcType="VARCHAR" property="idNo" />
+    <result column="idvalidity_date" jdbcType="DATE" property="idvalidityDate" />
+    <result column="country_area" jdbcType="VARCHAR" property="countryArea" />
+    <result column="marriage" jdbcType="VARCHAR" property="marriage" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="interest" jdbcType="VARCHAR" property="interest" />
+    <result column="mobile_phone_one" jdbcType="VARCHAR" property="mobilePhoneOne" />
+    <result column="mobile_phone_two" jdbcType="VARCHAR" property="mobilePhoneTwo" />
+    <result column="fixed_telephone" jdbcType="VARCHAR" property="fixedTelephone" />
+    <result column="grp_name" jdbcType="VARCHAR" property="grpName" />
+    <result column="occupation_name" jdbcType="VARCHAR" property="occupationName" />
+    <result column="occupation_code" jdbcType="VARCHAR" property="occupationCode" />
+    <result column="occupation_grade" jdbcType="VARCHAR" property="occupationGrade" />
+    <result column="income_source" jdbcType="VARCHAR" property="incomeSource" />
+    <result column="income_source_remark" jdbcType="VARCHAR" property="incomeSourceRemark" />
+    <result column="year_salary" jdbcType="VARCHAR" property="yearSalary" />
+    <result column="plicy_selection" jdbcType="VARCHAR" property="plicySelection" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="agent_code" jdbcType="VARCHAR" property="agentCode" />
+    <result column="delete_flag" jdbcType="VARCHAR" property="deleteFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ls_latency_customer
+    where customer_no = #{customerNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomer">
+    insert into ls_latency_customer (customer_no, name, name_pinyin, 
+      info_integrity, sex, birthday, 
+      age, id_type, id_no, 
+      idvalidity_date, country_area, marriage, 
+      degree, email, interest, 
+      mobile_phone_one, mobile_phone_two, fixed_telephone, 
+      grp_name, occupation_name, occupation_code, 
+      occupation_grade, income_source, income_source_remark, 
+      year_salary, plicy_selection, remark, 
+      agent_code, delete_flag, create_time, 
+      modify_time)
+    values (#{customerNo,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{namePinyin,jdbcType=VARCHAR}, 
+      #{infoIntegrity,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{idType,jdbcType=VARCHAR}, #{idNo,jdbcType=VARCHAR}, 
+      #{idvalidityDate,jdbcType=DATE}, #{countryArea,jdbcType=VARCHAR}, #{marriage,jdbcType=VARCHAR}, 
+      #{degree,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{interest,jdbcType=VARCHAR}, 
+      #{mobilePhoneOne,jdbcType=VARCHAR}, #{mobilePhoneTwo,jdbcType=VARCHAR}, #{fixedTelephone,jdbcType=VARCHAR}, 
+      #{grpName,jdbcType=VARCHAR}, #{occupationName,jdbcType=VARCHAR}, #{occupationCode,jdbcType=VARCHAR}, 
+      #{occupationGrade,jdbcType=VARCHAR}, #{incomeSource,jdbcType=VARCHAR}, #{incomeSourceRemark,jdbcType=VARCHAR}, 
+      #{yearSalary,jdbcType=VARCHAR}, #{plicySelection,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{agentCode,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{modifyTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomer">
+    update ls_latency_customer
+    set name = #{name,jdbcType=VARCHAR},
+      name_pinyin = #{namePinyin,jdbcType=VARCHAR},
+      info_integrity = #{infoIntegrity,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      id_type = #{idType,jdbcType=VARCHAR},
+      id_no = #{idNo,jdbcType=VARCHAR},
+      idvalidity_date = #{idvalidityDate,jdbcType=DATE},
+      country_area = #{countryArea,jdbcType=VARCHAR},
+      marriage = #{marriage,jdbcType=VARCHAR},
+      degree = #{degree,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      interest = #{interest,jdbcType=VARCHAR},
+      mobile_phone_one = #{mobilePhoneOne,jdbcType=VARCHAR},
+      mobile_phone_two = #{mobilePhoneTwo,jdbcType=VARCHAR},
+      fixed_telephone = #{fixedTelephone,jdbcType=VARCHAR},
+      grp_name = #{grpName,jdbcType=VARCHAR},
+      occupation_name = #{occupationName,jdbcType=VARCHAR},
+      occupation_code = #{occupationCode,jdbcType=VARCHAR},
+      occupation_grade = #{occupationGrade,jdbcType=VARCHAR},
+      income_source = #{incomeSource,jdbcType=VARCHAR},
+      income_source_remark = #{incomeSourceRemark,jdbcType=VARCHAR},
+      year_salary = #{yearSalary,jdbcType=VARCHAR},
+      plicy_selection = #{plicySelection,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      agent_code = #{agentCode,jdbcType=VARCHAR},
+      delete_flag = #{deleteFlag,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP}
+    where customer_no = #{customerNo,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select customer_no, name, name_pinyin, info_integrity, sex, birthday, age, id_type, 
+    id_no, idvalidity_date, country_area, marriage, degree, email, interest, mobile_phone_one, 
+    mobile_phone_two, fixed_telephone, grp_name, occupation_name, occupation_code, occupation_grade, 
+    income_source, income_source_remark, year_salary, plicy_selection, remark, agent_code, 
+    delete_flag, create_time, modify_time
+    from ls_latency_customer
+    where customer_no = #{customerNo,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select customer_no, name, name_pinyin, info_integrity, sex, birthday, age, id_type, 
+    id_no, idvalidity_date, country_area, marriage, degree, email, interest, mobile_phone_one, 
+    mobile_phone_two, fixed_telephone, grp_name, occupation_name, occupation_code, occupation_grade, 
+    income_source, income_source_remark, year_salary, plicy_selection, remark, agent_code, 
+    delete_flag, create_time, modify_time
+    from ls_latency_customer
+  </select>
+</mapper>

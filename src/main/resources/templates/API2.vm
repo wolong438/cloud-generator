@@ -1,0 +1,9 @@
+package ${package_name}.api.primary;
+
+/**
+* ${model}服务接口
+* @date ${ctime}
+*/
+public interface ${model}Api {
+
+}

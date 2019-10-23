@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".mapper.LsLatencyCustomerAddressMapper">
+  <resultMap id="BaseResultMap" type="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomerAddress">
+    <result column="address_no" jdbcType="VARCHAR" property="addressNo" />
+    <result column="customer_no" jdbcType="VARCHAR" property="customerNo" />
+    <result column="address_type" jdbcType="VARCHAR" property="addressType" />
+    <result column="province_addr" jdbcType="VARCHAR" property="provinceAddr" />
+    <result column="city_addr" jdbcType="VARCHAR" property="cityAddr" />
+    <result column="area_addr" jdbcType="VARCHAR" property="areaAddr" />
+    <result column="detailed_address" jdbcType="VARCHAR" property="detailedAddress" />
+    <result column="zip_code" jdbcType="VARCHAR" property="zipCode" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.sinosoft.sss.cloud.customer.entity.LsLatencyCustomerAddress">
+    insert into ls_latency_customer_address (address_no, customer_no, address_type, 
+      province_addr, city_addr, area_addr, 
+      detailed_address, zip_code, create_time, 
+      modify_time)
+    values (#{addressNo,jdbcType=VARCHAR}, #{customerNo,jdbcType=VARCHAR}, #{addressType,jdbcType=VARCHAR}, 
+      #{provinceAddr,jdbcType=VARCHAR}, #{cityAddr,jdbcType=VARCHAR}, #{areaAddr,jdbcType=VARCHAR}, 
+      #{detailedAddress,jdbcType=VARCHAR}, #{zipCode,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{modifyTime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select address_no, customer_no, address_type, province_addr, city_addr, area_addr, 
+    detailed_address, zip_code, create_time, modify_time
+    from ls_latency_customer_address
+  </select>
+</mapper>

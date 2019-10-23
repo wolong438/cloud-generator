@@ -1,0 +1,12 @@
+package ${package_name}.api.springmvc;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import io.swagger.annotations.Api;
+
+/**
+* ${model}服务接口
+* @date ${ctime}
+*/
+public interface ${model}Api {
+
+}
